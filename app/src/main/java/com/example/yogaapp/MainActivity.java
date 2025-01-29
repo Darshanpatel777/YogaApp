@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TabLayout tabLayout;
+
     private ViewPager2 viewPager;
 
     @Override
@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
 
         viewPager.setAdapter(new FragmentStateAdapter(this) {
@@ -37,18 +36,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> {
-            switch (position) {
-                case 0:
-                    tab.setText("Beginner");
-                    break;
-                case 1:
-                    tab.setText("Intermediate");
-                    break;
-                case 2:
-                    tab.setText("Advanced");
-                    break;
-            }
-        }).attach();
+
     }
 }
+
+
+// can you create for my android studio in  java project to yoga app in 10 types of cusine there pics n details? create conditions is 1.creat in fragment use,2.atleast 3 pics of image in item,3.minimum 8 item 1 cuisin
